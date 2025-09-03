@@ -4,69 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>game row mai tam</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/navbar_style.css">
+    <link rel="stylesheet" href="../css/event_style.css">
+  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- navbar -->
-    <div>
-         <ul>
-            <li><a href="index.html">GRMT</a>
-            <li><a href="index.html">Career</a>
-            <li><a href="event_page.html">Event</a>
-            <li><a href="contact_page.html">Contact</a>
-         </ul>
-    </div>
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <a href="#">.GRMT</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">CAREER</a></li>
+                <li><a href="../page/event_page.html">EVENT</a></li>
+                <li><a href="../page/contact_page.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <hr class="nav-underline">
+    </nav>
+
     <!-- เลือก event -->
     <!-- container -->
-    <div>
+    <div class="event-container">
         <h1>Events</h1>
-        <div>
+        <div class="event-item">
             <h1>Machine Learning Fundamentals</h1>    
             <p>ทำความเข้าใจพื้นฐาน ML, Regression, Classification และ Clustering เหมาะสำหรับ: ผู้เริ่มต้นด้าน Data Science</p> 
             <button class="btn" onclick="seeDetail(1)">See detail</button>
         </div>
-        <div>
+        <div class="event-item">
             <h1>Data Analytics with Python & SQL</h1>    
             <p>การใช้ Python (Pandas, Scikit-learn) และ SQL สำหรับ Data Analytics จริงในธุรกิจ
 เหมาะสำหรับ: ผู้ที่ต้องการเพิ่มทักษะการดึง วิเคราะห์ และจัดการข้อมูล</p> 
             <button class="btn" onclick="seeDetail(2)">See detail</button>
         </div>
-        <div>
+        <div class="event-item">
             <h1>Big Data Tools Workshop (Spark, Hive)</h1>    
             <p>การประมวลผลข้อมูลขนาดใหญ่, การ query และการ optimize performance
 เหมาะสำหรับ: ผู้สนใจสาย Data Engineer / Data Scientist ที่ใช้ข้อมูลขนาดใหญ่</p> 
             <button class="btn" onclick="seeDetail(3)">See detail</button>
         </div>
-        <div>
+        <div class="event-item">
             <h1>Game Community Management 101</h1>    
             <p>การสร้าง ปรับปรุง และดูแล community ของเกมให้แข็งแรง
 เหมาะสำหรับ: ผู้ที่สนใจงานด้านการสื่อสารกับผู้เล่น</p> 
             <button class="btn" onclick="seeDetail(4)">See detail</button>
         </div>
-        <div>
+        <div class="event-item">
             <h1>Live Ops & Monetization Strategies</h1>    
             <p>การออกแบบกิจกรรม Live Ops, ระบบ Monetization และการรักษาผู้เล่น
 เหมาะสำหรับ: ผู้สนใจด้าน Operation & Business ของเกม</p> 
             <button class="btn" onclick="seeDetail(5)">See detail</button>
         </div>
-        <div>
+        <div class="event-item">
             <h1>Data-Driven Game Operations</h1>    
             <p>การใช้ Data Analytics และ Dashboard เพื่อตัดสินใจด้าน Operation
 เหมาะสำหรับ: Fresh Grad ที่อยากเข้าใจการทำงานแบบ data-informed</p> 
             <button class="btn" onclick="seeDetail(6)">See detail</button>
         </div>
-        <div>
+        <div class="event-item">
             <h1>Game Combat Systems Design</h1>    
             <p>หลักการออกแบบระบบการต่อสู้, Balance, AI และ Skill Mechanic
 เหมาะสำหรับ: ผู้ที่สนใจสาย Game Designer โดยตรง</p> 
             <button class="btn" onclick="seeDetail(7)">See detail</button>
         </div>
-        <div>
+        <div class="event-item">
             <h1>Prototyping with Unity/Unreal</h1>    
             <p>การสร้าง prototype แบบเร็ว ๆ ด้วย Unity หรือ Unreal Engine
 เหมาะสำหรับ: Fresh Grad ที่อยากโชว์ผลงาน prototype</p> 
             <button class="btn" onclick="seeDetail(8)">See detail</button>
         </div>
-        <div>
+        <div class="event-item">
             <h1>Character & Monster Behavior Workshop</h1>    
             <p>การออกแบบพฤติกรรม, skill tree, และ ecosystem ของตัวละคร/มอนสเตอร์
 เหมาะสำหรับ: ผู้สนใจด้าน Creative Game Design</p> 

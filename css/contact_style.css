@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans Mono', monospace;
+    padding-top: 120px;
+    margin-bottom: 120px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.contact-info{
+    text-align: left;
+    margin-bottom: 40px;
+    font-weight: normal;
+    font-size: 20px;
+}
+.form-container {
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 28px;
+    width: fit-content;
+    min-width: 600px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-container label:first-of-type {
+    margin-top: 0;
+}
+
+.form-container select,
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: normal;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+.form-container input[type="text"]:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.form-container select {
+    width: 100% !important;
+    background-color: white;
+    cursor: pointer;
+}
+
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: normal;
+    resize: vertical;
+    min-height: 100px;
+    box-sizing: border-box;
+}
+
+.submit-button{
+    background: #222222;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover, 
+.submit-button.active {
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+/* Error message styling */
+.form-container p[id$="_error"] {
+    color: red !important;
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    min-height: 16px;
+}
+
+/* Required asterisk styling */
+.form-container label span[style*="color: red"] {
+    color: red !important;
+    margin-left: 3px;
+}

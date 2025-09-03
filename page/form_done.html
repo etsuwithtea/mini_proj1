@@ -4,19 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>game row mai tam</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/navbar_style.css">
+  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            }
+            body{
+                font-family: 'Noto Sans Mono', monospace;
+                padding-top: 120px;
+                margin-bottom: 120px;
+                width: 80%;
+                margin-left: 100px;
+                margin-bottom: 10px;
+                align-items: center;
+                gap: 60px;
+            }
+            body >a{
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1rem;
+                color: black;
+                transition: color 0.2s;
+            }
+            body >a:hover {
+                color: #ee2b2b;
+                border-bottom: 2px solid #ee2b2b;
+            }
+
+            body{
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1rem;
+                color: black;
+                transition: color 0.2s;
+            }
+
+            body p {
+                margin: 0;
+                padding: 0;
+                font-size: 150px;
+                color: black;
+            }
+            
+    </style>
 </head>
 <body>
-    <!-- navbar -->
-    <div>
-         <ul>
-            <li><a href="index.html">GRMT</a>
-            <li><a href="index.html">Career</a>
-            <li><a href="event_page.html">Event</a>
-            <li><a href="contact_page.html">Contact</a>
-         </ul>
-    </div>
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <a href="#">.GRMT</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">CAREER</a></li>
+                <li><a href="../page/event_page.html">EVENT</a></li>
+                <li><a href="../page/contact_page.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <hr class="nav-underline">
+    </nav>
 
-    <a href="index.html">Back To Career</a>
+    <a href="../index.html">&lt; Back To Career</a>
     <p>Submit Application Done!</p>
 </body>
 </html>

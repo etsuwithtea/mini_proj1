@@ -4,25 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/navbar_style.css">
+    <link rel="stylesheet" href="../css/form_detail.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- navbar -->
-    <div>
-         <ul>
-            <li><a href="index.html">GRMT</a>
-            <li><a href="index.html">Career</a>
-            <li><a href="event_page.html">Event</a>
-            <li><a href="contact_page.html">Contact</a>
-         </ul>
-    </div>
-    <div>
-        <a href="event_page.html">Back To Event</a>
-        <div>
-            <h1 id="name"></h1>
-            <span id="detail"></span>
-            <p id="target"></p>
-            <p id="format"></p>
-            <p id="duration"></p>
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <a href="#">.GRMT</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">CAREER</a></li>
+                <li><a href="../page/event_page.html">EVENT</a></li>
+                <li><a href="../page/contact_page.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <hr class="nav-underline">
+    </nav>
+
+
+
+    <!-- back buttons -->
+    <div class="container">
+        <div class="back-button-container">
+            <a class="back-button" href="../index.html">&lt; Back To Event</a>
+            
+            <!-- Event Images -->
+            <div class="event-images">
+                <img src="" alt="Event Image 1" class="event-img">
+                <img src="" alt="Event Image 2" class="event-img">
+            </div>
+            
+            <div>
+                <h1 id="name"></h1>
+                <span id="detail"></span>
+                <p id="target"></p>
+                <p id="format"></p>
+                <p id="duration"></p>
+            </div>
         </div>
     </div>
 
@@ -31,6 +60,7 @@
         const eventsData = [
             {
                 name: 'Machine Learning Fundamentals',
+                images: ['../image/event/MachineLearningFundamentals_1.png', '../image/event/MachineLearningFundamentals_2.png'],
                 detail: `หลักสูตรปูพื้นฐานด้าน Machine Learning ครอบคลุม Regression, Classification, Clustering และ Evaluation Metrics ผู้เรียนจะเข้าใจวิธีเลือกอัลกอริทึมที่เหมาะสมกับปัญหาและประเมินโมเดลได้อย่างถูกต้อง โดยจะได้เรียนรู้ประเภทของ Machine Learning ทั้งแบบ Supervised และ Unsupervised ฝึกสร้างโมเดล Regression และ Classification เบื้องต้น เข้าใจการใช้ Metrics เช่น RMSE, MAE, Accuracy และ F1-score รวมถึงแนวคิด Overfitting, Underfitting และ Cross-validation เพื่อนำไปประเมินและปรับปรุงโมเดลได้อย่างเหมาะสม.`,
                 target: 'นักศึกษาจบใหม่, ผู้สนใจเข้าสู่สาย Data Science',
                 format: 'Lecture + Hands-on (Python Notebooks)',
@@ -38,6 +68,7 @@
             },
             {
                 name: 'Data Analytics with Python & SQL',
+                images: ['../image/event/DataAnalyticswithPython&SQL_1.png', '../image/event/DataAnalyticswithPython&SQL_2.png'],
                 detail: `เรียนรู้การใช้ Python (Pandas, Matplotlib, Scikit-learn) และ SQL เพื่อดึง วิเคราะห์ และจัดการข้อมูลจากฐานข้อมูลจริง โดยผู้เรียนจะได้ฝึกการเขียน SQL Query เพื่อดึงข้อมูล การทำ Data Cleaning และ Data Wrangling ด้วย Pandas การสร้าง Visualization เบื้องต้น และการวิเคราะห์เชิงสถิติเพื่อสนับสนุนการตัดสินใจ.`,
                 target: 'ผู้สนใจงาน Data Analyst, Data Scientist',
                 format: 'Workshop + Lab Practice',
@@ -45,6 +76,7 @@
             },
             {
                 name: 'Big Data Tools Workshop (Spark, Hive)',
+                images: ['../image/event/BigDataToolsWorkshop_1.png', '../image/event/BigDataToolsWorkshop_2.png'],
                 detail: `หลักสูตรสำหรับผู้ที่ต้องการทำงานกับข้อมูลขนาดใหญ่ โดยเรียนรู้การใช้ Apache Spark และ Hive เพื่อจัดการข้อมูลหลายล้านแถวได้อย่างรวดเร็ว ผู้เรียนจะได้รู้จัก Big Data Ecosystem การใช้ Hive SQL Query การประมวลผลข้อมูลแบบ Distributed ด้วย Spark และการปรับแต่ง pipeline ให้ทำงานได้อย่างมีประสิทธิภาพมากขึ้น.`,
                 target: 'Data Engineer, Data Scientist ที่ทำงานกับ Big Data',
                 format: 'Lab-based Workshop',
@@ -52,6 +84,7 @@
             },
             {
                 name: 'Game Community Management 101',
+                images: ['../image/event/GameCommunityManagement_1.png', '../image/event/GameCommunityManagement_2.png'],
                 detail: `หลักสูตรที่สอนวิธีสร้างและดูแล Community ของผู้เล่นเกม ตั้งแต่การสร้าง Engagement ไปจนถึงการรับมือ Feedback และ Crisis Management โดยผู้เรียนจะได้เรียนรู้เทคนิคการสร้าง Content ที่ดึงดูดผู้เล่น การใช้ Social Media, Discord และ Forum การจัด Event หรือ Campaign สำหรับผู้เล่น รวมถึงการจัดการกับ Feedback และปัญหาที่เกิดขึ้นภายใน Community อย่างมีประสิทธิภาพ.`,
                 target: 'ผู้สนใจงาน Game Ops, Community Manager',
                 format: 'Case Study + Role Play',
@@ -59,6 +92,7 @@
             },
             {
                 name: 'Live Ops & Monetization Strategies',
+                images: ['../image/event/LiveOps&MonetizationStrategies_1.png', '../image/event/LiveOps&MonetizationStrategies_2.png'],
                 detail: `หลักสูตรที่เน้นการทำ Live Operation และกลยุทธ์การสร้างรายได้ในเกม เช่น Battle Pass, Gacha และ Limited Events พร้อมการวิเคราะห์ KPI โดยผู้เรียนจะได้เข้าใจวงจร Live Ops ตั้งแต่ Pre-launch ไปจนถึง Post-event รู้จักวิธีออกแบบ Event และ Reward System การวิเคราะห์พฤติกรรมผู้เล่นเพื่อนำไปปรับปรุงการ Monetization และการสร้างสมดุลระหว่างประสบการณ์ผู้เล่นกับรายได้ของเกม.`,
                 target: 'Game Operations Specialist, Product Manager',
                 format: 'Lecture + Group Activity',
@@ -66,6 +100,7 @@
             },
             {
                 name: 'Data-Driven Game Operations',
+                images: ['../image/event/DataDrivenGameOperations_1.png', '../image/event/DataDrivenGameOperations_2.png'],
                 detail: `หลักสูตรที่สอนการใช้ Data Analytics เพื่อพัฒนาและปรับปรุงประสบการณ์ผู้เล่น โดยใช้ Dashboard และ Tools ในการวิเคราะห์ข้อมูล ผู้เรียนจะได้รู้จัก Metrics สำคัญของเกม เช่น DAU, MAU, Retention และ ARPU พร้อมทั้งฝึกสร้าง Dashboard เพื่อติดตาม KPI การใช้ A/B Testing เพื่อตัดสินใจเชิงกลยุทธ์ และการนำข้อมูลผู้เล่นไปประยุกต์ใช้ในการปรับปรุง Live Ops.`,
                 target: 'Game Operations Specialist, Data Analyst',
                 format: 'Hands-on Workshop + Dashboard Building',
@@ -73,6 +108,7 @@
             },
             {
                 name: 'Game Combat Systems Design',
+                images: ['../image/event/GameCombatSystemsDesign_1.png', '../image/event/GameCombatSystemsDesign_2.png'],
                 detail: `หลักสูตรที่เน้นการออกแบบระบบการต่อสู้ของเกม ครอบคลุมการสร้าง Character Balance, Skill Tree, AI Behavior และ Combat Flow โดยผู้เรียนจะได้เข้าใจหลักการออกแบบ Combat Mechanics การวางสมดุลระหว่าง Player และ Monster การออกแบบ Skill Combo และ Chain System รวมถึงการทดสอบและปรับสมดุลระบบการต่อสู้อย่างเป็นระบบ.`,
                 target: 'Game Designer, Combat Designer Fresh Grad',
                 format: 'Workshop + Prototyping Exercise',
@@ -80,6 +116,7 @@
             },
             {
                 name: 'Prototyping with Unity/Unreal',
+                images: ['../image/event/PrototypingwithUnityUnreal_1.png', '../image/event/PrototypingwithUnityUnreal_2.png'],
                 detail: `หลักสูตรที่สอนวิธีสร้าง Prototype ของระบบการต่อสู้หรือ Gameplay เบื้องต้นใน Unity และ Unreal เพื่อทดสอบไอเดียได้อย่างรวดเร็ว ผู้เรียนจะได้ฝึกการใช้ Unity/Unreal Editor การสร้าง Character Controller เบื้องต้น การ Implement Mechanics เช่น การโจมตี การใช้สกิล และการหลบหลีก รวมถึงการสร้าง Prototype ที่สามารถเล่นได้จริงภายในเวลาจำกัด.`,
                 target: 'Game Designer, Indie Dev',
                 format: 'Hands-on Lab',
@@ -87,6 +124,7 @@
             },
             {
                 name: 'Character & Monster Behavior Workshop',
+                images: ['../image/event/Character&MonsterBehaviorWorkshop_1.png', '../image/event/Character&MonsterBehaviorWorkshop_2.png'],
                 detail: `หลักสูตรที่เจาะลึกการออกแบบพฤติกรรมของตัวละครและมอนสเตอร์ ครอบคลุมตั้งแต่ Movement Pattern, AI, Skill Usage ไปจนถึง Ecosystem โดยผู้เรียนจะได้เรียนรู้การออกแบบ AI Behavior แบบ Aggressive, Defensive และ Supportive การสร้าง Skill Tree และ Evolution Path การออกแบบ Ecosystem ระหว่าง Monster Types รวมถึงเทคนิคการทดสอบและปรับแต่ง AI/Behavior ภายใน Prototype.`,
                 target: 'Combat Designer, AI Designer',
                 format: 'Lecture + Group Design Activity',
@@ -96,12 +134,20 @@
 
         const params = new URLSearchParams(window.location.search);
         const receivedId = params.get("id");
+        const eventData = eventsData[receivedId - 1];
 
-        document.getElementById("name").innerText = eventsData[receivedId - 1].name;
-        document.getElementById("detail").innerText = eventsData[receivedId - 1].detail;
-        document.getElementById("target").innerText = `Target Audience: ` + eventsData[receivedId - 1].target;
-        document.getElementById("format").innerText = `Format: ` + eventsData[receivedId - 1].format;
-        document.getElementById("duration").innerText = `Duration: ` + eventsData[receivedId - 1].duration;
+        document.getElementById("name").innerText = eventData.name;
+        document.getElementById("detail").innerText = eventData.detail;
+        document.getElementById("target").innerText = `Target Audience: ` + eventData.target;
+        document.getElementById("format").innerText = `Format: ` + eventData.format;
+        document.getElementById("duration").innerText = `Duration: ` + eventData.duration;
+
+        // Update images based on event
+        const eventImages = document.querySelectorAll('.event-img');
+        eventImages[0].src = eventData.images[0];
+        eventImages[0].alt = `${eventData.name} - Image 1`;
+        eventImages[1].src = eventData.images[1];
+        eventImages[1].alt = `${eventData.name} - Image 2`;
     </script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans Mono', monospace;
+    padding: 20px;
+    line-height: 1.6;
+    width: 65%;
+    margin: 0 auto;
+}
+
+body h1{
+    margin-bottom: 20px;
+}
+
+body h2{
+    margin-bottom: 10px;
+}
+
+body div{
+    color: rgb(39, 39, 39);
+}
