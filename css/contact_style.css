@@ -105,7 +105,7 @@ body{
     cursor: pointer;
 }
 
-/* Error message styling */
+
 .form-container p[id$="_error"] {
     color: red !important;
     font-size: 12px;
@@ -114,8 +114,8 @@ body{
     min-height: 16px;
 }
 
-/* Required asterisk styling */
 .form-container label span[style*="color: red"] {
     color: red !important;
     margin-left: 3px;
 }
+

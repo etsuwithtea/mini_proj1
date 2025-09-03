@@ -21,12 +21,15 @@ body{
     font-size: 1rem;
     color: black;
     transition: color 0.2s;
+    display: inline;
+    width: fit-content;
 }
 
 .back-button:hover {
     color: #ee2b2b;
     border-bottom: 2px solid #ee2b2b;
 }
+
 
 .container{
     width: 75%;
@@ -71,4 +74,25 @@ body{
     margin-top: 15px;
     font-size: 1.1rem;
     color: #333;
+}
+
+
+.event-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.event-img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.event-img:hover {
+    transform: scale(1.05);
 }
