@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans Mono', monospace;
+    padding-top: 120px
+}
+
+.back-button{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+    transition: color 0.2s;
+}
+
+.back-button:hover {
+    color: #ee2b2b;
+    border-bottom: 2px solid #ee2b2b;
+}
+
+.career-description{
+    text-align: left;
+    margin: 0 auto;
+    align-items: center;
+    width: 75%;
+}
+
+.career-description h1{
+    font-size: 75px;
+    font-weight: bolder;
+}
+
+.career-description h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.career-description .description{
+    font-size: 14px;
+    text-align: left;
+    padding: 100px;
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    white-space: pre-line; 
+}
+
+.apply-button{
+    background: #222222;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 24px;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.apply-button:hover, 
+.apply-button.active {
+    background: #4CAF50;
+    border: none;
+    cursor: pointer;
+}

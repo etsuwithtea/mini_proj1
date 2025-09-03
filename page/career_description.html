@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Row Mai Tum</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/navbar_style.css">
+    <link rel="stylesheet" href="../css/career_description_style.css">
+  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <a href="#">.GRMT</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#">CAREER</a></li>
+                <li><a href="page/event_page.html">EVENT</a></li>
+                <li><a href="page/contact_page.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <hr class="nav-underline">
+    </nav>
+    
+
+    <!-- Career Description -->
+    <div class="career-description">
+
+    <div class="back-button-container">
+        <a class="back-button" href="../index.html">&lt; Back To Career</a>
+    </div>
+        <h1 class="title" id="job_select"></h1>
+        <p class="location" id="location_job_select"></p>
+        <span class="description" id="description_job_select"></span>
+        <button class="apply-button" onclick="applyJob()">Apply to Position</button>
+    </div>
+    <script src="../js/career_description.js"></script>
+</body>
+</html>

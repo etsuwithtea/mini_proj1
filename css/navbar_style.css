@@ -1,0 +1,81 @@
+.navbar {
+    border: none;
+    background: white;
+    padding-bottom: 0;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    width: calc(100% - 100px);
+    margin: 0 50px;
+    background: rgba(255,255,255,0.85);
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #4CAF50;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: #4CAF50;
+    transition: width 0.2s;
+    border-radius: 2px;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.nav-underline {
+    border: none;
+    border-top: 3px solid rgb(24, 24, 24);
+    margin: 0 0 0 0;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+}

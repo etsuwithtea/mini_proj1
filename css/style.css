@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans Mono', monospace;
+    padding-top: 90px;
+}
+
+.title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.25;
+    color: rgb(24, 24, 24);
+    letter-spacing: 2px;
+    overflow: hidden;
+    white-space: pre-line;
+}
+
+.description {
+    text-indent: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgb(100, 100, 100);
+}
+.description p {
+    word-break: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.image-slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    margin: 40px 0;
+}
+
+.image-slideshow img {
+    width: 225px;
+    height: 400px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    object-fit: cover; 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.image-slideshow img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.career {
+    max-width: 700px;
+    margin: 60px auto 40px auto;
+    padding: 32px 40px;
+    background: #f6f6f6;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.career-subtitle {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 28px;
+    margin-top: 8px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+.career h1{
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.career > div {
+    display: flex;
+    flex-direction: row; 
+    gap: 28px; 
+    justify-content: center; 
+}
+
+.career > div > div {
+    flex: 1 1 0;
+    min-width: 220px;
+    max-width: 300px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 24px 24px 18px 24px;
+    margin-bottom: 0;
+    border-bottom: none;
+    text-align: left;
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    height: 220px;
+    transition: transform 0.2s;
+}
+
+.career .btn {
+    align-self: center; 
+}
+
+.career > div > div:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    transform: scale(1.05);
+}
+
+.career > div > div:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.career p:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.career p:nth-child(2) {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.career .btn {
+    background: #222;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 24px;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.career .btn:hover,
+.career .btn.active {
+    background: #4CAF50;
+    color: #fff;
+}
