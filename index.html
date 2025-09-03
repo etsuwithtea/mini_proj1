@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>game row mai tam</title>
+    <style>
+    .btn{
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background-color: #ddd;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .btn:hover {
+      background-color: #ccc;
+    }
+
+    .active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    </style>
 </head>
 <body>
-    
+    <!-- navbar -->
+    <div>
+         <ul>
+            <li><a href="index.html">GRMT</a>
+            <li><a href="index.html">Career</a>
+            <li><a href="event_page.html">Event</a>
+            <li><a href="contact_page.html">Contact</a>
+         </ul>
+    </div>
+    <div>
+        <h1>กูจะหนีไปเล่น Silksong, Sybau 🥀</h1>
+        <img src="/image/silksong.webp" alt=""> 
+        <div>
+            <!-- Description -->
+            <p>
+                We’re Beyond Co., Ltd., an independent game studio based in Singapore. We are the creators of Beyond Hana, a visual novel that blends emotional storytelling with atmospheric art and music, creating an experience that lingers long after the game ends.
+
+                Our team is small but deeply passionate about narrative-driven experiences. With a flat and collaborative structure, every voice in the team contributes to crafting worlds, characters, and choices that truly resonate with players.
+
+                Right now, we’re working on our next visual novel — a story that explores “love and loss in a fragmented future”. At Beyond, we experiment and iterate to bring fresh, heartfelt experiences to players who love to lose themselves in meaningful stories.
+            </p>
+        </div>
+
+        <!-- container -->
+        <div>
+            <!-- box --> 
+            <div>
+                <p>Data Scientist Intern</p>
+                <p>Beyond Co., Ltd. (Singapore Office), Singapore</p>
+                <button class="btn" onclick="selectJob(1)">Apply</button></a>
+            </div>
+
+            <div>
+                <p>Game Operations Specialist - Fresh Grad</p>
+                <p>Beyond Co., Ltd. (Singapore Office), Singapore</p>
+                <button class="btn" onclick="selectJob(2)">Apply</button>
+            </div>
+
+            <div>
+                <p>Combat Designer - Fresh Grad</p>
+                <p>Beyond Co., Ltd. (Singapore Office), Singapore</p>
+                <button class="btn" onclick="selectJob(3)">Apply</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function selectJob(num){
+            const buttons = document.querySelectorAll(".btn");
+            // เลือกเเต่ปุ่ม
+            buttons.forEach(btn => btn.classList.remove('active'));           
+            buttons[num - 1].classList.add('active');
+
+            // เปลี่ยนหน้าพร้อม num ไปด้วย
+            window.location.href = `career_description.html?id=${num}`;
+        }
+    </script>
 </body>
 </html>
