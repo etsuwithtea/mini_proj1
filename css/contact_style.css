@@ -1,121 +1,238 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     font-family: 'Noto Sans Mono', monospace;
     padding-top: 120px;
     margin-bottom: 120px;
+    background: #f7f7f7;
 }
 
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+.contact-person-list {
+    margin-top: 18px;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
+    gap: 8px;
+}
+.contact-person {
+    display: flex;
     align-items: center;
-    justify-content: center; 
+    gap: 12px;
+    font-size: 1.08rem;
+}
+.person-name {
+    font-weight: 500;
+    color: #333;
+    min-width: 160px;
+    display: inline-block;
+}
+.person-tel {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+.person-tel:hover {
+    color: #388e3c;
+    text-decoration: underline;
 }
 
-.contact-info{
-    text-align: left;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0 0 0;
+    align-items: start;
+}
+
+.contact-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 0 0;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 36px 32px 32px 32px;
+    min-width: 320px;
+    max-width: 400px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
     margin-bottom: 40px;
-    font-weight: normal;
-    font-size: 20px;
 }
-.form-container {
-    background: #fafafa;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 28px;
-    width: fit-content;
-    min-width: 600px;
-    max-width: 1000px;
-    margin: 40px auto;
+.contact-info h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #222;
+}
+.contact-details {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 18px;
+}
+.contact-details .company {
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
-.form-container label {
+.contact-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 32px 0 0;
+}
+.contact-headline {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 24px;
+    font-family: 'Noto Sans Mono', monospace;
+    letter-spacing: 0.5px;
+}
+.contact-desc {
+    font-size: 1.25rem;
+    color: #666;
+    line-height: 1.7;
+    max-width: 540px;
+    margin-bottom: 32px;
+}
+.contact-company {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1rem;
+}
+.contact-address {
+    color: #888;
+    font-size: 1rem;
+}
+
+.contact-details .address {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+.contact-persons div {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.contact-persons span {
+    font-weight: 500;
+    color: #222;
+}
+.contact-persons a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.contact-persons a:hover {
+    color: #388e3c;
+    text-decoration: underline;
+}
+
+.form-card {
+    background: #fafafa;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding: 36px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 480px;
+    flex: 1 1 340px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.form-card label {
     display: block;
     margin-bottom: 8px;
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
+    margin-top: 18px;
+    font-weight: 700;
+    font-size: 1.08rem;
+    color: #222;
 }
-
-.form-container label:first-of-type {
+.form-card label:first-of-type {
     margin-top: 0;
 }
-
-.form-container select,
-.form-container input[type="text"],
-.form-container textarea {
+.form-card .required {
+    color: #e53935;
+    font-size: 1rem;
+    margin-left: 2px;
+}
+.form-card select,
+.form-card input[type="text"],
+.form-card textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #c7c7c7;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: normal;
+    padding: 13px 14px;
+    border: 1.5px solid #c7c7c7;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 400;
     box-sizing: border-box;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
-
-.form-container input[type="text"]:focus,
-.form-container select:focus,
-.form-container textarea:focus {
-    border-color: #007bff;
+.form-card input[type="text"]:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+    border-color: #4CAF50;
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.15);
 }
-
-.form-container select {
-    width: 100% !important;
-    background-color: white;
+.form-card select {
+    background-color: #fff;
     cursor: pointer;
 }
-
-.form-container textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #c7c7c7;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: normal;
+.form-card textarea {
     resize: vertical;
     min-height: 100px;
-    box-sizing: border-box;
 }
-
-.submit-button{
-    background: #222222;
+.submit-button {
+    background: #222;
     color: #fff;
     font-weight: bold;
     border-radius: 8px;
     padding: 12px 32px;
     font-size: 1rem;
-    margin-top: 20px;
+    margin-top: 22px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.2s;
+    letter-spacing: 1px;
 }
-
-.submit-button:hover, 
-.submit-button.active {
+.submit-button:hover, .submit-button:active {
     background: #4CAF50;
-    cursor: pointer;
+    color: #fff;
 }
-
-
-.form-container p[id$="_error"] {
-    color: red !important;
-    font-size: 12px;
+.form-card p[id$="_error"] {
+    color: #e53935;
+    font-size: 0.95rem;
     margin-top: 2px;
     margin-bottom: 10px;
     min-height: 16px;
+    font-weight: 500;
 }
-
-.form-container label span[style*="color: red"] {
-    color: red !important;
-    margin-left: 3px;
-}
-

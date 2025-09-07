@@ -6,7 +6,7 @@
     <title>game row mai tam</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="../image/icon.jpg">
+    <link rel="icon" type="image/jpeg" href="../image/icon.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -38,22 +38,37 @@
         </div>
         <hr class="nav-underline">
     </nav>
-    <div class="container">
-        <div class="contact-info">
-            <h1>Contact Us</h1>
-            <p>Beyond Co., Ltd.</p>
-            <p>9/1 Moo 5 Phaholyothin Road, Klong Nueng, Klong Luang, Pathumthani 12120</p>
-            <p>นวพรรษ์ สุทนต์ : 0960159077</p>
-            <p>สุภชีพ พูลสวัสดิ์ : 0625282058</p>
-            <p>ระพีพงษ์ ไชยมงคล : 0897050946 </p>
+    <div class="container contact-grid">
+        <div class="contact-hero">
+            <h1 class="contact-headline">We are here to help!</h1>
+            <p class="contact-desc">
+                Let us know how we can best serve you. Use the contact form to email us or select from the topics below that best fit your needs.<br>
+                It's an honor to support you in your journey towards better health.<br><br>
+                <span class="contact-company">Beyond Co., Ltd.</span><br>
+                <span class="contact-address">9/1 Moo 5 Phaholyothin Road, Klong Nueng, Klong Luang, Pathumthani 12120</span><br>
+                <div class="contact-person-list">
+                    <div class="contact-person">
+                        <span class="person-name">NAVAPAN SUTHON</span>
+                        <a class="person-tel" href="tel:0960159077">0960159077</a>
+                    </div>
+                    <div class="contact-person">
+                        <span class="person-name">SUPACHEEP POONSAWAT</span>
+                        <a class="person-tel" href="tel:0625282058">0625282058</a>
+                    </div>
+                    <div class="contact-person">
+                        <span class="person-name">RAPEEPONG CHAIMONGKOL</span>
+                        <a class="person-tel" href="tel:0897050946">0897050946</a>
+                    </div>
+                </div>
+            </p>
         </div>
-        <div class="form-container">
+        <div class="form-card">
             <form name="contact" onSubmit="return formValidation();" id="contactForm">
-                <label for="name">Name</label><span style="color: red !important; display: inline; float: none;">*</span>
-                <input type="text" id="name" name="name" placeholder="Name">
-                <p id="name_error" style="color: red !important;"></p>
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your name">
+                <p id="name_error"></p>
 
-                <label for="country">country</label><span style="color: red !important; display: inline; float: none;">*</span>
+                <label for="country">Country <span class="required">*</span></label>
                 <select id="country" name="country">
                     <option value="" selected>Select Country</option>
                     <option value="Afghanistan">Afghanistan</option>
@@ -303,46 +318,44 @@
                 </select>
                 <p id="country_error" style="color: red !important;"></p>
 
-                <label for="note">Note</label><span style="color: red !important; display: inline; float: none;">*</span>
-                <textarea name="note" id="note"></textarea>
-                <p id="note_error" style="color: red !important;"></p>
+                <label for="note">Note <span class="required">*</span></label>
+                <textarea name="note" id="note" placeholder="How can we help you?"></textarea>
+                <p id="note_error"></p>
 
-                <button class="submit-button" Dtype="submit">Submit</button>
+                <button class="submit-button" type="submit">Send Message</button>
             </form>
         </div>
     </div>
     
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(e) {
-            const name = document.getElementById("name").value
-            const country = document.getElementById("country").value
-            const note = document.getElementById("country").value
+            const name = document.getElementById("name").value.trim();
+            const country = document.getElementById("country").value;
+            const note = document.getElementById("note").value.trim();
+            let valid = true;
 
             if(name.length < 1 || name.length > 50){
-                if(name.length < 1){
-                    document.getElementById("name_error").innerText = "A full name is required";
-                }
-                if(name.length > 50){
-                    document.getElementById("name_error").innerText = "To much charecter";
-                }
-                e.preventDefault();
+                document.getElementById("name_error").innerText = name.length < 1 ? "A full name is required" : "Too many characters";
+                valid = false;
             }else{
-                document.getElementById("fullname_error").innerText = "";
+                document.getElementById("name_error").innerText = "";
             }
 
             if(!country){
-                document.getElementById("country_error").innerText = "Please Select Country";
-                e.preventDefault();
+                document.getElementById("country_error").innerText = "Please select a country";
+                valid = false;
             }else{
                 document.getElementById("country_error").innerText = "";
             }
 
             if(note.length < 1){
                 document.getElementById("note_error").innerText = "A note is required";
-                e.preventDefault();
+                valid = false;
             }else{
                 document.getElementById("note_error").innerText = "";
             }
+
+            if(!valid) e.preventDefault();
         });
     </script>
     <script src="../js/falling_characters.js"></script>
