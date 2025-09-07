@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>game row mai tam</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="../image/icon.jpg">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/falling_characters.css">
     <link rel="stylesheet" href="../css/navbar_style.css">
     <link rel="stylesheet" href="../css/contact_style.css">
 
@@ -17,11 +21,14 @@
 
 </head>
 <body>
+    <!-- Falling Characters Background -->
+    <div class="falling-characters" id="fallingCharacters"></div>
+    
       <!-- navigation bar -->
     <nav class="navbar">
         <div class="navbar-container">
             <div class="nav-logo">
-                <a href="#">.GRMT</a>
+                <a href="../index.html">.GRMT</a>
             </div>
             <ul class="nav-menu">
                 <li><a href="../index.html">CAREER</a></li>
@@ -38,7 +45,7 @@
             <p>9/1 Moo 5 Phaholyothin Road, Klong Nueng, Klong Luang, Pathumthani 12120</p>
             <p>นวพรรษ์ สุทนต์ : 0960159077</p>
             <p>สุภชีพ พูลสวัสดิ์ : 0625282058</p>
-            <p>ระพีพงษ์ ไชยมงคล : 0961234567</p>
+            <p>ระพีพงษ์ ไชยมงคล : 0897050946 </p>
         </div>
         <div class="form-container">
             <form name="contact" onSubmit="return formValidation();" id="contactForm">
@@ -338,5 +345,6 @@
             }
         });
     </script>
+    <script src="../js/falling_characters.js"></script>
 </body>
 </html>

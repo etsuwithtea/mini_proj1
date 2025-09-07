@@ -79,20 +79,28 @@ body{
 
 .event-images {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
+    align-items: center;
     margin: 30px 0;
     flex-wrap: wrap;
+    padding: 20px 0;
 }
 
 .event-img {
     width: 400px;
     height: 500px;
     object-fit: cover;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid #ddd;
 }
 
 .event-img:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: #b9b9b9;
 }
+
+

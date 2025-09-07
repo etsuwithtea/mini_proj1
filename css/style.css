@@ -5,7 +5,10 @@
 body{
     font-family: 'Noto Sans Mono', monospace;
     padding-top: 90px;
+    position: relative;
+    overflow-x: hidden;
 }
+
 .navbar {
     border: none;
     background: white;
