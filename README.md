@@ -23,7 +23,7 @@ This project simulates a career site for a fictional game company, inspired by r
 
 ### 🏠 Home / Landing Page
 
-![Landing Page](assets/screenshots/1.png)
+![Landing Page](assets/screenshots/0.png)
 
 ### 📄 Job Description
 
